@@ -21,6 +21,9 @@
         config = {
           Entrypoint = [ "/bin/dnscrypt-proxy" ];
           Command = [ "-config" "/etc/dnscrypt-proxy/config.toml" ];
+          Labels = {
+            "org.opencontainers.image.source" = "https://github.com/farcaller/nix-dnscrypt";
+          };
         };
       };
     };
