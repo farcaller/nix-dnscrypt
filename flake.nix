@@ -17,6 +17,7 @@
           paths = [
             pkgs.dockerTools.fakeNss
             pkgs.dnscrypt-proxy2
+            pkgs.cacert
           ];
           pathsToLink = [ "/bin" "/etc" ];
         };
