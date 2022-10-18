@@ -14,8 +14,11 @@
 
         copyToRoot = pkgs.buildEnv {
           name = "dnscrypt";
-          paths = [ pkgs.dnscrypt-proxy2 ];
-          pathsToLink = [ "/bin" ];
+          paths = [
+            pkgs.dockerTools.fakeNss
+            pkgs.dnscrypt-proxy2
+          ];
+          pathsToLink = [ "/bin" "/etc" ];
         };
 
         config = {
